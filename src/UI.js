@@ -19,7 +19,7 @@ export class UI {
                 </div>
             </div>
         `;
-    productList.appendChild(element);
+    productList.insertBefore(element, productList.firstChild);
   }
 
   /**
@@ -32,7 +32,7 @@ export class UI {
   deleteProduct(element) {
     if (element.name === "delete") {
       element.parentElement.parentElement.remove();
-      this.showMessage("Product Deleted Succsssfully", "success");
+      this.showMessage("Product Deleted Successfully", "success");
     }
   }
 
