@@ -1,7 +1,7 @@
 import { Product } from "./Product.js";
 import { UI } from "./UI.js";
 
-// DOM
+// DOM Events - Form Submit
 document
   .getElementById("product-form")
   .addEventListener("submit", function (e) {
@@ -12,23 +12,16 @@ document
       year = document.getElementById("year").value;
       const product = new Product(name, price, year);
 
-    
     const ui = new UI();
 
-    // Input de Validation
+    // Input Validation
     if (name === "" || price === "" || year === "") {
-      ui.showMessage("Please Insert data in all fields", "danger");
+      ui.showMessage("Por favor completa todos los campos", "danger");
       return;
     }
 
     // Save Product
     ui.addProduct(product);
-    ui.showMessage("Product Added Successfully", "success");
+    ui.showMessage("Producto Agregado Exitosamente", "success");
     ui.resetForm();
   });
-
-document.getElementById("product-list").addEventListener("click", (e) => {
-  const ui = new UI();
-  ui.deleteProduct(e.target);
-  e.preventDefault();
-});

@@ -21,9 +21,10 @@
     </nav>
 
     <div class="container">
-                                     
-      <div id="App" class="row pt-5">
-        <div class="col-md-4">
+      <div id="App" class="app-layout">
+        <!-- LEFT SECTION: FORM & PRODUCTS -->
+        <div class="left-section">
+          <!-- FORM -->
           <div class="card">
             <div class="card-header">
               <h4>Agregar un Producto</h4>
@@ -33,7 +34,7 @@
                 <input
                   type="text"
                   id="name"
-                  placeholder="Nombre Producto "
+                  placeholder="Nombre Producto"
                   class="form-control"
                 />
               </div>
@@ -64,10 +65,22 @@
               />
             </form>
           </div>
+
+          <!-- PRODUCTS LIST -->
+          <div id="product-list"></div>
         </div>
 
-                              <!-- PRODUCTS LIST -->
-        <div id="product-list" class="col-md-8"></div>
+        <!-- RIGHT SECTION: SUMMARY LIST -->
+        <div class="right-section">
+          <div class="card">
+            <div class="card-header">
+              <h4>Productos Agregados</h4>
+            </div>
+            <div id="products-summary" class="products-summary-list">
+              <p class="empty-message">No hay productos agregados</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
