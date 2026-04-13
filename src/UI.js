@@ -7,7 +7,7 @@ export class UI {
    * @param {Object} product A new product Object
    */
   addProduct(product) {
-    // Add to left section - Product cards with grid layout
+   
     const productList = document.getElementById("product-list");
     const cardElement = document.createElement("div");
     cardElement.className = "card";
@@ -27,7 +27,7 @@ export class UI {
     `;
     productList.insertBefore(cardElement, productList.firstChild);
 
-    // Add to right section - Summary list
+    
     const summary = document.getElementById("products-summary");
     const summaryItem = document.createElement("div");
     const itemId = `summary-${Date.now()}`;
